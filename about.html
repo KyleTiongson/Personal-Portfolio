@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>About Me!</title>
+</head>
+<body>
+    <div class="top-bar">C:\Home\User&gt; cd About|</div>
+
+    <div class="content">
+      <h1>Hello!</h1>
+    <p>
+      My name is Kyle Tiongson, and I am a 4th-year Bachelor of Science in Computer Science student at Pamantasan ng Cabuyao (University of Cabuyao). At <span id="age"></span> years old, I have a passion for creating innovative solutions and advancing my skills in technology.
+    </p>
+    <p>
+      I enjoy developing web applications and have hands-on experience in building apps and working with machine learning. Through my academic journey and practical projects, I have honed my ability to craft functional, user-friendly, and intelligent systems that make a difference.
+    </p>
+    </div>
+    
+    <div class="card-container">
+        <div class="card">
+          <div class="terminal-bar">C:\Home\User\About&gt; cd Skills|</div>
+          <div class="skills">
+            <div class="skill java">
+              <div class="skill-name">Java</div>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+            <div class="skill html">
+              <div class="skill-name">HTML</div>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+            <div class="skill js">
+              <div class="skill-name">Javascript</div>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+            <div class="skill css">
+              <div class="skill-name">CSS</div>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+            <div class="skill python">
+              <div class="skill-name">Python</div>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+            <div class="skill csharp">
+              <div class="skill-name">C#</div>
+              <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+      <a href="index.html"><i class="fas fa-home"></i></a>
+      <a href="about.html"><i class="fas fa-info-circle"></i></a>
+      <a href="showcase.html"><i class="fas fa-briefcase"></i></a>
+      <a href="contact.html"><i class="fas fa-envelope"></i></a>
+    </div>
+      
+  <footer>
+    <div class="footer-content">
+      <p>© 2024 Kyle D.</p>
+      <div class="socials">
+        <i class="fab fa-github"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script>
+  //Age update every year
+  const birthDate = new Date(2002, 0, 22);
+
+  function calculateAge(birthDate) {
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  }
+
+  // Insert age into the span with id 'age'
+  document.getElementById('age').textContent = calculateAge(birthDate);
+</script>
+
+</html>

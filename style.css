@@ -1,0 +1,741 @@
+/* ===========================
+   GLOBAL RESET AND BODY STYLE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins;
+  color: white;
+  background: url('assets/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===========================
+   TOP BAR
+=========================== */
+.top-bar {
+  padding: 1rem;
+  font-family: 'Poppins', monospace;
+  background: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  font-size: 1.125rem;
+  border-radius: 10px;
+  border: 1px solid #FFF;
+  box-shadow: 0px 3px 7.5px 1px rgba(5, 2, 2, 0.25);
+  width: 90%;
+  max-width: 767px;
+  margin: 10px auto 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+/* ===========================
+   HOME PAGE STYLES
+=========================== */
+.homeContent {
+  width: 90%;
+  max-width: 855px;
+  margin: 10px auto;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.homeContent h1 {
+  color: #FFF;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+}
+
+.homeContent p {
+  width: 100%;
+  max-width: 626px;
+  color: #F0F0F0;
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 3.12px;
+  margin-bottom: 20px;
+}
+
+.text-button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 855px;
+  gap: 20px;
+}
+
+.text-button-wrapper p {
+  flex: 1;
+  margin: 0;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  text-decoration: none;
+  gap: 10px;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  font-size: 14px;
+}
+
+.download-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* ===========================
+   RESPONSIVE TWEAKS - HOME
+=========================== */
+@media (max-width: 600px) {
+  .homeContent h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .homeContent p,
+  .text-button-wrapper p {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .text-button-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-btn {
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeContent {
+    width: 99%;
+    margin: 10px auto;
+    padding: 0 2px;
+  }
+
+  .homeContent h1 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .homeContent p,
+  .text-button-wrapper p {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 0 2px;
+  }
+
+  .text-button-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .download-btn {
+    font-size: 12px;
+    padding: 10px 14px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .button-container {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .homeContent {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .homeContent h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin: 24px 0 12px 0;
+  }
+
+  .homeContent p,
+  .text-button-wrapper p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+  }
+
+  .text-button-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .download-btn {
+    font-size: 1rem;
+    padding: 14px 0;
+    width: 90vw;
+    max-width: 400px;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .button-container {
+    margin-top: 18px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+.sidebar {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-right: 0;
+  z-index: 999;
+}
+
+.sidebar i {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-size: 26px;
+}
+.sidebar a {
+  text-decoration: none;
+}
+
+.sidebar i:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1000px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    width: 100%;
+  }
+
+  .sidebar i {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
+footer .socials {
+  display: flex;
+  gap: 25px;
+}
+
+footer .socials i {
+  font-size: 28px;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+footer .socials i::after {
+  content: '';
+  display: block;
+  margin-top: 8px;
+  height: 3px;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+footer .socials i:hover {
+  color: #ccc;
+}
+
+footer .socials i:hover::after {
+  transform: scaleX(1);
+}
+
+/* ===========================
+   ABOUT PAGE
+=========================== */
+.content {
+  width: 855px;
+  flex-shrink: 0;
+  margin: 100px auto;
+}
+
+.content h1 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.content p {
+  width: 626px;
+  max-width: 750px;
+  color: #F0F0F0;
+  font-family: "Poppins";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 117%;
+  letter-spacing: 3.12px;
+  white-space: pre-line;
+}
+
+.terminal-bar {
+  padding: 20px;
+  font-family: 'Poppins', monospace;
+  background: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #FFF;
+  box-shadow: 0px 3px 7.5px 1px rgba(5, 2, 2, 0.25);
+  width: 545px;
+  height: 57px;
+  margin: 0 20px 20px auto;
+}
+
+/* Skills Card */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  width: 600px;
+  color: white;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-name {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #ffddf4;
+}
+
+.progress-bar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #3a7bd5;
+}
+
+.java .progress {
+  width: 70%;
+}
+
+.html .progress {
+  width: 85%;
+}
+
+.js .progress {
+  width: 75%;
+}
+
+.css .progress {
+  width: 80%;
+}
+
+.python .progress {
+  width: 65%;
+}
+
+.csharp .progress {
+  width: 60%;
+}
+
+/* Responsive Tweaks - About */
+@media (max-width: 768px) {
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .content p {
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .terminal-bar {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 98%;
+    margin: 40px auto 20px auto;
+    padding: 0 5px;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .content p {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 0 2px;
+  }
+
+  .terminal-bar {
+    width: 100%;
+    min-width: unset;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 0 0 15px 0;
+    box-sizing: border-box;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    min-width: unset;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content p {
+    font-size: 1rem;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+
+  .terminal-bar {
+    width: 100%;
+    margin: 0 0 1.25rem 0;
+  }
+}
+
+/* ===========================
+   SHOWCASE / PROJECTS
+=========================== */
+.works-title {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 100px auto 0;
+  margin-top: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
+  justify-content: center;
+  align-items: start;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 300px;
+  text-align: left;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+/* ===========================
+   CONTACT SECTION
+=========================== */
+.contact-container {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.contact-intro {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact-heading {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.name-row {
+  display: flex;
+  gap: 10px;
+}
+
+.name-row input {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  background-color: white;
+  color: rgb(24, 24, 24);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  width: 100px;
+  align-self: center;
+}
+
+.contact-form button:hover {
+  background-color: #ddd;
+}
+
+/* Responsive Tweaks - Contact */
+@media (max-width: 700px) {
+  .contact-container {
+    margin-top: 10px;
+    padding: 0 5px;
+  }
+
+  .contact-heading {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .contact-intro {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 2px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 2px;
+    box-sizing: border-box;
+  }
+
+  .name-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 1.1rem;
+  }
+
+  .contact-intro {
+    font-size: 0.95rem;
+    padding: 0 2px;
+  }
+
+  .contact-form {
+    padding: 0 1px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
