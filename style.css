@@ -435,27 +435,27 @@ footer .socials i:hover::after {
 }
 
 .java .progress {
-  width: 70%;
+  width: 63%;
 }
 
 .html .progress {
-  width: 85%;
-}
-
-.js .progress {
   width: 75%;
 }
 
-.css .progress {
-  width: 80%;
+.js .progress {
+  width: 45%;
 }
 
-.python .progress {
+.css .progress {
   width: 65%;
 }
 
+.python .progress {
+  width: 55%;
+}
+
 .csharp .progress {
-  width: 60%;
+  width: 35%;
 }
 
 /* Responsive Tweaks - About */
