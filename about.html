@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>About Me!</title>
 </head>
 <body>
-    <div class="top-bar">C:\Home\User&gt; cd About|</div>
+    <div data-aos="fade-down" data-aos-duration="1000" class="top-bar">C:\Home\User&gt; cd About|</div>
 
     <div class="content">
-      <h1>Hello!</h1>
-    <p>
+      <h1 data-aos="fade-down" data-aos-duration="2000">Hello!</h1>
+    <p data-aos="fade-right" data-aos-duration="2000">
       My name is Kyle Tiongson, and I am a 4th-year Bachelor of Science in Computer Science student at Pamantasan ng Cabuyao (University of Cabuyao). At <span id="age"></span> years old, I have a passion for creating innovative solutions and advancing my skills in technology.
     </p>
-    <p>
+    <p data-aos="fade-left" data-aos-duration="2000">
       I enjoy developing web applications and have hands-on experience in building apps and working with machine learning. Through my academic journey and practical projects, I have honed my ability to craft functional, user-friendly, and intelligent systems that make a difference.
     </p>
     </div>
     
-    <div class="card-container">
+    <div data-aos="fade-up" data-aos-duration="2000" class="card-container">
         <div class="card">
           <div class="terminal-bar">C:\Home\User\About&gt; cd Skills|</div>
           <div class="skills">
@@ -52,7 +53,7 @@
         </div>
       </div>
 
-      <div class="sidebar">
+      <div data-aos="fade-left" data-aos-duration="1000" class="sidebar">
       <a href="index.html"><i class="fas fa-home"></i></a>
       <a href="about.html"><i class="fas fa-info-circle"></i></a>
       <a href="showcase.html"><i class="fas fa-briefcase"></i></a>
@@ -89,5 +90,10 @@
   // Insert age into the span with id 'age'
   document.getElementById('age').textContent = calculateAge(birthDate);
 </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>  
 
 </html>

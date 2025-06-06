@@ -6,25 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-
-  <div class="top-bar">C:\Home\User&gt; cd Home|</div>
+  <div data-aos="fade-down" data-aos-duration="1000" class="top-bar">C:\Home\User&gt; cd Home|</div>
 
   <div class="content">
-    <h1>Hey! I'm Kyle Tiongson,</h1>
+    <h1 data-aos="fade-down" data-aos-duration="2000">Hey! I'm Kyle Tiongson,</h1>
     <div class="text-button-wrapper">
-      <p>
+      <p data-aos="fade-down" data-aos-duration="2000">
         Driven by a passion for innovation, I’m always seeking new ways to learn and grow. 
         Whether building user-friendly applications or exploring cutting-edge technologies, 
         I strive to create meaningful and impactful solutions. 
         Here, I share my journey, showcase my projects, and celebrate the moments that inspire me along the way.
       </p>
-      <a href="cv/Tiongson, Kyle CV.pdf" download class="download-btn"><i class="fa-solid fa-file-arrow-down"></i> DOWNLOAD CV</a>
+      <a data-aos="fade-right" data-aos-duration="1000" href="cv/Tiongson, Kyle CV.pdf" download class="download-btn"><i class="fa-solid fa-file-arrow-down"></i> DOWNLOAD CV</a>
     </div>
   </div>
   
-  <div class="sidebar">
+  <div data-aos="fade-left" data-aos-duration="1000" class="sidebar">
     <a href="index.html"><i class="fas fa-home"></i></a>
     <a href="about.html"><i class="fas fa-info-circle"></i></a>
     <a href="showcase.html"><i class="fas fa-briefcase"></i></a>
@@ -44,4 +44,8 @@
   </footer>
   
 </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>   
 </html>
